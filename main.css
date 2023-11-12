@@ -87,15 +87,83 @@ p {
     display: inline-block;
 }
 
-#about-movie,
-#trailer{
-    background-color: rgba(55, 55, 160, 0.514);
+#about-movie{
+    background-color: rgba(55, 55, 160, 0.329);
 }
 
-section h1{
+section h1,
+section h2{
     margin-bottom: 16px;
     font-family: 'Poppins', sans-serif;
     font-size: 32px;
+}
+
+section h1{
+    margin-bottom: 24px;
+}
+
+section h2{
+    font-size: 20px;
+}
+
+.container img{
+    height: 400px;
+}
+
+.poster{
+    max-width: 1280px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.capa-poster .grid{
+    display: block;
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+#capa-poster {
+    height: 700px;
+    margin-right: 24px;
+}
+
+.grid li {
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.grid li img{
+    height: 24px;
+}
+
+.button{
+    align-self: flex-end;
+}
+
+.button li,
+.button2 li{
+    list-style: none;
+    display: block;
+    display: flex;
+}
+
+#classi{
+    height: 40px;
+}
+
+.button li img,
+.button2 li img{
+    height: 70px;
+    width: 70px;
+    object-fit: fill;
+    border-radius: 5%;
+}
+
+.button button,
+.button2 button{
+    border: none;
+    
 }
 
 #mike .circle1{
@@ -111,9 +179,8 @@ section h1{
 }
 
 #mike {
-    background-color: rgba(0, 128, 0, 0.267);
+    background-color: rgba(0, 128, 0, 0.178);
 }
-
 
 .right-photo{
     margin-left: 100px;
@@ -121,10 +188,6 @@ section h1{
 
 .left-photo {
     margin-right: 100px
-}
-
-.container img{
-    height: 400px;
 }
 
 #sulley .circle2{
@@ -140,7 +203,7 @@ section h1{
 }
 
 #sulley {
-    background-color: rgba(60, 167, 167, 0.356);
+    background-color: rgba(60, 167, 167, 0.315);
 }
 
 #boo .circle3{
@@ -156,12 +219,21 @@ section h1{
 }
 
 #boo {
-    background-color: rgba(255, 192, 203, 0.493);
+    background-color: rgba(229, 128, 145, 0.185);
 }
 
 .trailer-block{
+    display: flex;
     display: block;
-    margin-left: 30%;
+    justify-content: space-between;
+}
+
+
+.button2 li img{
+    height: 70px;
+    width: 70px;
+    object-fit: fill;
+    border-radius: 5%;
 }
 
 .trailer-block h1{
@@ -173,8 +245,12 @@ section p {
     font-family: 'Roboto', sans-serif;
 }
 
+#trailer{
+    background-color: #fff;
+    align-items: flex-start;
+}
 iframe{
-    border: 16px solid rgba(55, 55, 160, 0.808);
+    border: 16px solid rgba(156, 158, 158, 0.808);
 }
 
 section p{
