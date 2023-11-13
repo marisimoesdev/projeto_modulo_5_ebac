@@ -82,13 +82,13 @@ section .container{
     align-items: flex-start;
 }
 
-h2,
-p {
-    display: inline-block;
-}
-
 #about-movie{
     background-color: rgba(55, 55, 160, 0.329);
+}
+
+#about-movie .container .paragrafo,
+#about-movie .container.paragrafo2{
+    display: inline-block;
 }
 
 #about-movie img{
@@ -121,8 +121,6 @@ section h2{
 }
 
 .capa-poster .grid{
-    display: block;
-    display: flex;
     align-self: flex-start;
     justify-content: space-between;
 }
@@ -132,23 +130,22 @@ section h2{
     margin-right: 24px;
 }
 
-.grid li {
+.grid li,
+#about-movie li {
     list-style: none;
     margin-bottom: 16px;
+}
+.grid h2{
+    display: inline-block;
 }
 
 .grid li img{
     height: 24px;
 }
 
-.link-disney{
-    align-self: flex-end;
-}
-
 .link-disney li{
     list-style: none;
     display: block;
-    display: flex;
 }
 
 #classi{
@@ -159,7 +156,7 @@ section h2{
     height: 70px;
     width: 70px;
     object-fit: fill;
-    border-radius: 5%;
+    border-radius: 15%;
 }
 
 .link-disney a{
@@ -178,8 +175,32 @@ section h2{
     z-index: -1;
 }
 
-#mike {
-    background-color: rgba(0, 128, 0, 0.178);
+#mike{
+    background-color: rgba(146, 206, 146, 0.363);
+}
+
+#mike h1,
+#mike p,
+#boo h1,
+#boo P,
+#about-movie h1,
+#about-movie p,
+#sulley h1,
+#sulley p{
+    text-align: center;
+}
+
+.paragrafo,
+#about-movie .paragrafo2{
+    border: 2px solid rgb(9, 109, 9);
+    box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.384);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.paragrafo #title-green{
+    color: rgb(9, 109, 9);
+    margin-bottom: 12px;
 }
 
 .right-photo{
@@ -202,6 +223,15 @@ section h2{
     z-index: -1;
 }
 
+.paragrafo #title-blue{
+    color: rgb(60, 167, 167);
+    margin-bottom: 12px;
+}
+
+#sulley .paragrafo{
+    border: 2px solid rgb(60, 167, 167);
+}
+
 #sulley {
     background-color: rgba(60, 167, 167, 0.315);
 }
@@ -218,8 +248,41 @@ section h2{
     z-index: -1;
 }
 
+#boo .paragrafo{
+    border: 2px solid rgb(182, 43, 187);
+    margin-left: 70px;
+}
+.paragrafo #title-pink{
+    color: rgb(182, 43, 187);
+    margin-bottom: 12px;
+}
+
 #boo {
     background-color: rgba(229, 128, 145, 0.185);
+}
+
+.paragrafo #title-purple,
+#about-movie .paragrafo2 h3,
+#trailer h1{
+    color: rgba(125, 39, 175, 0.582);
+}
+
+.paragrafo2 h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+#about-movie .paragrafo,
+#about-movie .paragrafo2{
+    border: 2px solid rgba(125, 39, 175, 0.582);
+}
+
+#about-movie .paragrafo2{
+    margin-right: 580px;
+}
+
+#about-movie .paragrafo2 h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
 }
 
 .trailer-block{
@@ -236,7 +299,7 @@ footer p,
 section p,
 form input,
 form textarea,
-form button {
+form button{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -265,15 +328,18 @@ form button{
     width: 320px;
     margin-bottom: 8px;
     padding: 8px;
+    border-radius: 15px;
 }
 
 form button{
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
+    background-color: rgba(125, 39, 175, 0.582);
+    border: none;
 }
 
 form{
-    border: 2px solid rgba(12, 12, 12, 0.808);
+    border: 2px solid rgba(125, 39, 175, 0.582);
     border-radius: 8%;
     background-color: rgba(128, 128, 128, 0.288);
     padding: 8px;
