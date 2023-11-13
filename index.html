@@ -33,6 +33,9 @@
                         <li>
                             <a href="#trailer">Trailer</a>
                         </li>
+                        <li>
+                            <a href="#trailer">Pesquisa</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -52,17 +55,15 @@
                         <h2>Classificação: </h2>
                         <img id="classi" src="./imagens/indicativa.png" alt="Classificação Indicativa do Filme">
                     </li>
-                    <div class="button">
+                    <div class="link-disney">
                         <ul>
                             <li>
                                 <h1>Assistir agora </h1>
                             </li>
                             <li>
-                                <button>
-                                    <a href="https://www.disneyplus.com/pt-br/movies/monstros-sa/5vQuMGjgTZz5" title="Assista Agora ao filme">
-                                        <img src="./imagens/logo_disney.jpg" alt="Logo da Disney Plus">
-                                    </a>
-                                </button>
+                                <a href="https://www.disneyplus.com/pt-br/movies/monstros-sa/5vQuMGjgTZz5" title="Assista Agora ao filme">
+                                    <img src="./imagens/logo_disney.jpg" alt="Logo da Disney Plus">
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -121,24 +122,33 @@
         <div class="container">
             <div class="trailer-block">
                 <h1>Trailer</h1>
-                <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iRh2kF-1X2E?si=slnz5tJTXTeTI17b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iRh2kF-1X2E?si=slnz5tJTXTeTI17b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-                <div class="button2">
-                    <ul>
-                        <li>
-                            <h1>Assistir agora </h1>
-                        </li>
-                        <li>
-                            <button>
-                                <a href="https://www.disneyplus.com/pt-br/movies/monstros-sa/5vQuMGjgTZz5" title="Assista Agora ao filme">
-                                    <img src="./imagens/logo_disney.jpg" alt="Logo da Disney Plus">
-                                </a>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+                <form>
+                    <h1>Pesquisa</h1>
+                    <p>
+                        Qual o seu personagem favorito?
+                    </p>
+                    <select>
+                        <option>Mike</option>
+                        <option>Sulley</option>
+                        <option>Boo</option>
+                    </select>
+                    <p>
+                        Qual a sua avalição sobre o filme?
+                    </p>
+                    <select>
+                        <option>Ruim</option>
+                        <option>Mediano</option>
+                        <option>Bom</option>
+                        <option>Muito Bom</option>
+                    </select>
+                    <p>
+                        Dê sua opinião sobre o filme
+                    </p>
+                    <textarea placeholder="Sua opinião" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
         </div>
     </section>

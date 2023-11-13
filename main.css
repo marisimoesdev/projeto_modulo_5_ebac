@@ -91,6 +91,10 @@ p {
     background-color: rgba(55, 55, 160, 0.329);
 }
 
+#about-movie img{
+    box-shadow: 11px 11px 13px rgba(0, 0, 0, 0.479);
+}
+
 section h1,
 section h2{
     margin-bottom: 16px;
@@ -137,12 +141,11 @@ section h2{
     height: 24px;
 }
 
-.button{
+.link-disney{
     align-self: flex-end;
 }
 
-.button li,
-.button2 li{
+.link-disney li{
     list-style: none;
     display: block;
     display: flex;
@@ -152,18 +155,15 @@ section h2{
     height: 40px;
 }
 
-.button li img,
-.button2 li img{
+.link-disney li img{
     height: 70px;
     width: 70px;
     object-fit: fill;
     border-radius: 5%;
 }
 
-.button button,
-.button2 button{
+.link-disney a{
     border: none;
-    
 }
 
 #mike .circle1{
@@ -228,34 +228,65 @@ section h2{
     justify-content: space-between;
 }
 
-
-.button2 li img{
-    height: 70px;
-    width: 70px;
-    object-fit: fill;
-    border-radius: 5%;
-}
-
 .trailer-block h1{
     text-align: center; 
 }
 
 footer p,
-section p {
+section p,
+form input,
+form textarea,
+form button {
     font-family: 'Roboto', sans-serif;
 }
 
 #trailer{
-    background-color: #fff;
+    background-color: rgba(55, 55, 160, 0.329);
     align-items: flex-start;
 }
 iframe{
-    border: 16px solid rgba(156, 158, 158, 0.808);
+    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.479);
+}
+
+form{
+    box-shadow: 3px 7px 18px rgba(0, 0, 0, 0.493);
 }
 
 section p{
     font-size: 20px;
     text-align: justify;
+}
+
+form h1,
+form select,
+form textarea,
+form button{
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form button{
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+form{
+    border: 2px solid rgba(12, 12, 12, 0.808);
+    border-radius: 8%;
+    background-color: rgba(128, 128, 128, 0.288);
+    padding: 8px;
+}
+
+form h1{
+    padding: 0px;
+    text-align: center;
+}
+
+form textarea{
+    resize: none;
+    height: 150px;
 }
 
 footer p{
