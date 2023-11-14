@@ -1,182 +1,197 @@
-* {
+* {/*dando um reset nas configurações do navegaor*/
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*configuração necessária para o pixel perfect*/
 }
 
 .container {
-    max-width: 1280px;
-    width: 95%;
-    margin: 0 auto;
+    max-width: 1280px; /*largura máxima*/
+    width: 95%; /*a ocupação máxima do conteúdo*/
+    margin: 0 auto; /*tirando as margens*/
 }
 
 header,
 footer {
-    padding: 16px 0;
-    background-color: black;
+    padding: 16px 0; /*top right bottom left*/ /*margem entre o conteúdo e a borda*/
+    background-color: black; /*cor de fundo do menu e do rodapé*/
 }
 
-header .container img{
-    height: 50px;
+header .container img{  /*imagem do header*/
+    height: 50px; /*altura da imagem*/
 }
 
 .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /*configuração necessária para o uso do flexboard*/
+    align-items: center; /*alinhado o itens do centro, deixando eles no mesmo nivelamento*/
+    justify-content: space-between; /*separando os elementos, assim eles ficarão separados com um espaço
+    por um espaço entre eles*/
 }
 
-header nav li {
-    display: inline-block;
-    position: relative;
+header nav li { /*lista não ordenada que está no header */
+    display: inline-block; /*colocando eles um do lado do outro em forma de bloco*/
+    position: relative; /*configuração necessária para a criação do dropmenu*/ 
+    /*position: relative, é colocado no elemento pai, ele é usado quando queremos alterar a posição
+    de um elemento tendo referência a posição do elemento pai*/
 }
 
-header nav li a{
+header nav li a{ /*estilizando os links da lista não ordenada do menu*/
     color:#fff;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    text-align: center;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /*fonte do google font*/
+    text-decoration: none; /*tirando os underlines que vem automaticamente com os links*/
+    text-align: center; /*essa configuração eu colocaquei pra deixar as palavras certinhas dentro das bordas,
+    quando passa o mouse em cima das palavras*/
 }
 
-.dropdown-menu{
-    position: absolute;
-    left: 0;
-    display: none;
+.dropdown-menu{ /*configurando o menu dorpdown*/
+    position: absolute; /*essa confiração está relacionada com o position relative no elemento pai, que nesse caso header nav li*/
+    /*position: absolute, fará com que o elemento seja absoluto, porém levando em conta o elemento pai, já que o mesmo tem o position: relative*/
+    margin-left: 0; /*zerando a margem da esquerda, só assim o mesmo ficará embaixo da paralavra “personagem”*/
+    display: none; /*essa configuração é para que o dropdown menu suma e só aparece com o passar do mouse*/
 }
 
-header nav li a,
+header nav li a, /*configurando os links do header*/
 .dropdown-menu a{
-    display: block;
-    color: #fff;
-    border: 1px solid black;
+    display: block; /*display em coluna*/
+    color: #fff; /*cor do texto*/
     padding: 10px;
-    background-color: black;
-    width: 150px;
+    background-color: black; /*cor de fundo, essa configuração mais pra o dropdown menu*/
+    width: 130px; /*largura do retângulo*/
 }
 
-.dropdown:hover .dropdown-menu{
-    display: block;
-    position: absolute;
-    z-index: 999;
+.dropdown:hover .dropdown-menu{ /*colocando efeito. Quando passar o mouse em cima da palavra “personagem” irá aparecer o dropdown menu*/
+    display: block; /*display em coluna*/
+    position: absolute; /*essa confiração está relacionada com o position relative no elemento pai, que nesse caso header nav li*/
+    /*position: absolute, fará com que o elemento seja absoluto, porém levando em conta o elemento pai, já que o mesmo tem o position: relative*/
+    z-index: 1; /*essa configuração especifica a ordem de pilha dos elementos, assim ese elemento com ordem de empilhamento superior
+    será exibido à frente de outro com número inferior, que nesse caso é a section de baixo */
 }
 
-.dropdown-menu:hover #about-movie{
-    z-index: -1;
-}
-
-header nav li a:hover,
+header nav li a:hover, /*colocando efeito os links do header*/
 .dropdown-menu li a:hover{
-    background-color: #fff;
-    color: black;
+    background-color: #fff;/*cor de fundo*/
+    color: black; /*dor do texto*/
+    border: 1px solid black; /*borda*/
 }
 
 section {
-    height: 500px;
-    padding: 24px 0px;
-    overflow: hidden;
-    position: relative;
+    height: 500px; /*altura das seções*/
+    padding: 24px 0px; /*espaçamento entre o conteúdo e a borda das seções*/
+    position: relative; /*configuração necessária para a criação do 1/4 de um cículo nas seções dos personagens*/ 
+    /*position: relative, é colocado no elemento pai, ele é usado quando queremos alterar a posição
+    de um elemento tendo referência a posição do elemento pai*/
 }
 
 section .container{
-    align-items: flex-start;
+    align-items: flex-start; /*essa conficuração é para que os elementos se alinhe no topo das seções*/
 }
 
 #about-movie{
-    background-color: rgba(55, 55, 160, 0.329);
+    background-color: rgba(55, 55, 160, 0.329); /*cor de fundo*/
 }
 
-#about-movie .container .paragrafo,
-#about-movie .container.paragrafo2{
-    display: inline-block;
+#about-movie .paragrafo,
+#about-movie .paragrafo2{
+    border: 2px solid rgba(125, 39, 175, 0.582); /*borda*/
+}
+
+#about-movie .paragrafo2{ /*a menor div da section*/
+    margin-right: 580px; /*margem da direita para que essa div fique pequena*/
+}
+
+#about-movie .paragrafo2 h4 { /*texto h4*/
+    font-family: 'Roboto', sans-serif; /*fonte do google fonts*/
+    font-weight: normal; /*tirando o negrito que o navegador estava colocando automaticamente*/
+}
+
+.paragrafo2 h3{ /*texto h4*/
+    font-family: 'Poppins', sans-serif; /*fonte do google fonts*/
 }
 
 #about-movie img{
-    box-shadow: 11px 11px 13px rgba(0, 0, 0, 0.479);
+    box-shadow: 11px 11px 13px rgba(0, 0, 0, 0.377); /*sombreamento da imagem dessa seção*/
 }
 
-section h1,
+section h1, /*configurando os títulos*/
 section h2{
-    margin-bottom: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
+    margin-bottom: 16px; /*margem embaixo*/
+    font-family: 'Poppins', sans-serif; /*fonte do google fonts*/
+    font-size: 32px; /*tamanho*/
 }
 
 section h1{
-    margin-bottom: 24px;
+    margin-bottom: 24px; /*margem embaixo*/
 }
 
 section h2{
-    font-size: 20px;
+    font-size: 20px; /*tamanho*/
 }
 
-.container img{
-    height: 400px;
+section p{
+    font-size: 20px; /*tamanho da fonte dos parágrafos*/
 }
 
-.poster{
-    max-width: 1280px;
-    height: 800px;
-    margin: 0 auto;
+.container img{ /*as imagens que estão dentro da classe .container*/
+    height: 400px; /*altura das imagens*/
 }
 
-.capa-poster .grid{
-    align-self: flex-start;
-    justify-content: space-between;
+.poster{ /*chamando a classe poster que é uma única seção*/
+    height: 800px; /*aumentando a altura dela, ela vai ser a mais alta comparada com as outras*/
 }
 
-#capa-poster {
-    height: 700px;
-    margin-right: 24px;
+#capa-poster { /*chamando a imagem principal da seção poster pelo id dela*/
+    height: 700px; /*altura dela, ela será a maior dentre as outras*/
+    margin-right: 24px; /*margem da direita*/
 }
 
-.grid li,
-#about-movie li {
-    list-style: none;
-    margin-bottom: 16px;
+.grid li, /*lista não ordenada*/
+#about-movie li { /*lista não ordenada*/
+    list-style: none; /*tirando os bullets points dessas duas listas*/
+    margin-bottom: 16px; /*margem embaixo de cada item da lista*/
 }
-.grid h2{
-    display: inline-block;
-}
-
-.grid li img{
-    height: 24px;
+.grid h2{ /*teste a h2 dessa classe*/ 
+    display: inline-block; /*colocando elas em formato de bloco um do lado do outro, nessa parte foi necessária para
+    que as imagens ficassem do lado das palavras*/
 }
 
-.link-disney li{
-    list-style: none;
-    display: block;
+.grid li img{/*configurando a imagem das estrelinhas*/
+    height: 24px; /*altura*/
 }
 
-#classi{
-    height: 40px;
+#classi{/*configurando a imagem da classificação do filme*/
+    height: 40px; /*altura*/
 }
 
-.link-disney li img{
-    height: 70px;
-    width: 70px;
-    object-fit: fill;
-    border-radius: 15%;
+.link-disney li img{ /*configurando a imagem do botão da disney plus*/
+    height: 70px; /*altura*/
+    border-radius: 15%; /*deixando as quinas das bordas dessa imagem arredondadas*/
 }
 
-.link-disney a{
-    border: none;
+.link-disney li{ /*confcurando os itens desta lista*/
+    list-style: none; /*tirando os bullets points dessa lista*/
+    display: block; /*display coluna*/
 }
 
-#mike .circle1{
-    position: absolute;
-    border-radius: 0%;
-    width: 500px;
-    height: 800px;
-    background-color: rgb(9, 109, 9);
-    clip-path: circle(70% at bottom left);
-    left: 0;
-    bottom: 0;
-    z-index: -1;
+.link-disney a{ /*configurando o link*/
+    border: none; /*tirando as bordas*/
+}
+
+#mike .circle1, /*o criando  o 1/4 de um círculo*/
+#boo .circle3{ /*o criando  o 1/4 de um círculo*/
+    position: absolute; /*essa confiração está relacionada com o position relative no elemento pai, que nesse caso é a tag section, que eu coloquei lá em cima*/
+    /*position: absolute, fará com que o elemento seja absoluto, porém levando em conta o elemento pai, já que o mesmo tem o position: relative*/
+    border-radius: 0%; /*aqui eu estou tirando o aredondamento da parte inferior à esquerda do elemento*/
+    width: 500px; /*largura*/
+    height: 800px; /*altura*/
+    background-color: rgb(9, 109, 9); /*cor*/
+    clip-path: circle(70% at bottom left); /*essa propriedade permite fazer cortes no elemento, podendo assim gerar visualmente novos elementos como circulos, polígonos, etc... Isto é, alguma forma geometrica ou abstrata.*/
+    /*nesse caso eu estou fazendo com que 70% de um círculo apareça apareça embaixo e a esquerda da tela*/
+    left: 0; /*tirando toda margem da esquerda, assim o mesmo ficará grudado a esquerda da tela na sua respectiva seção, graças ao relative e absolute*/
+    bottom: 0; /*tirando toda margem debaixo, assim o mesmo ficará grudado embaixo da seção da tela na sua respectiva seção, graças ao relative e absolute*/
 }
 
 #mike{
-    background-color: rgba(146, 206, 146, 0.363);
+    background-color: rgba(146, 206, 146, 0.363); /*cor de fundo*/
 }
 
 #mike h1,
@@ -187,112 +202,88 @@ section h2{
 #about-movie p,
 #sulley h1,
 #sulley p{
-    text-align: center;
+    text-align: center; /*alinhado texto, assim o mesmo ficará no centro*/
 }
 
-.paragrafo,
-#about-movie .paragrafo2{
-    border: 2px solid rgb(9, 109, 9);
-    box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.384);
-    border-radius: 12px;
-    padding: 12px;
+.paragrafo, /*configurando as div dos paragrafos*/
+.paragrafo2{
+    border: 2px solid rgb(9, 109, 9); /*borda*/
+    box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.185); /*colocando sombreamento*/
+    border-radius: 12px; /*deixando as quinas das bordas os paragrafos arredondadas*/
+    padding: 12px;/*epaçamento entre o conteúdo e a borda*/
 }
 
-.paragrafo #title-green{
-    color: rgb(9, 109, 9);
-    margin-bottom: 12px;
+.paragrafo #title-green{ /*chamando o id title-green que está dentro da classe paragrafo*/
+    color: rgb(9, 109, 9); /*cor do texto*/
+    margin-bottom: 12px; /*margem debaixo*/
 }
 
-.right-photo{
-    margin-left: 100px;
+.right-photo{ /*essa classe é das imagens da section about-movie e da section sulley*/
+    margin-left: 100px; 
 }
 
-.left-photo {
+.left-photo { /*essa classe é das imagens da section mike e da section boo*/
     margin-right: 100px
 }
 
-#sulley .circle2{
-    position: absolute;
-    border-radius: 0%;
+#mike img,
+#sulley img,
+#boo img{
+    z-index: 1; /*essa configuração especifica a ordem de pilha dos elementos, assim ese elemento com ordem de empilhamento superior
+    será exibido à frente de outro com número inferior, que nesse caso é são os 1/4 de círculo */
+}
+
+#sulley .circle2{ /*o criando  o 1/4 de um círculo*/
+    position: absolute; /*essa confiração está relacionada com o position relative no elemento pai, que nesse caso é a tag section, que eu coloquei lá em cima*/
+    /*position: absolute, fará com que o elemento seja absoluto, porém levando em conta o elemento pai, já que o mesmo tem o position: relative*/
+    border-radius: 0%; /*aqui eu estou tirando o aredondamento da parte inferior à direita do elemento*/
     width: 500px;
     height: 800px;
     background-color: rgb(60, 167, 167);
-    clip-path: circle(70% at bottom right);
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    clip-path: circle(70% at bottom right);/*essa propriedade permite fazer cortes no elemento, podendo assim gerar visualmente novos elementos como circulos, polígonos, etc... Isto é, alguma forma geometrica ou abstrata.*/
+    /*nesse caso eu estou fazendo com que 70% de um círculo apareça apareça embaixo e a direita da tela*/
+    right: 0; /*tirando toda margem da esquerda, assim o mesmo ficará grudado a esquerda da tela na sua respectiva seção, graças ao relative e absolute*/
+    bottom: 0; /*tirando toda margem debaixo, assim o mesmo ficará grudado embaixo da seção da tela na sua respectiva seção, graças ao relative e absolute*/
 }
 
-.paragrafo #title-blue{
+.paragrafo #title-blue{ /*chamando o id title-blue que está dentro da classe paragrafo*/
     color: rgb(60, 167, 167);
     margin-bottom: 12px;
 }
 
 #sulley .paragrafo{
-    border: 2px solid rgb(60, 167, 167);
+    border: 2px solid rgb(60, 167, 167); /*borda*/
 }
 
 #sulley {
-    background-color: rgba(60, 167, 167, 0.315);
+    background-color: rgba(60, 167, 167, 0.315); /*cor de fundo*/
 }
 
 #boo .circle3{
-    position: absolute;
-    border-radius: 0%;
-    width: 500px;
-    height: 800px;
-    background-color: rgb(182, 43, 187);
-    clip-path: circle(70% at bottom left);
-    left: 0;
-    bottom: 0;
-    z-index: -1;
+    background-color: rgb(182, 43, 187); /*cor de fundo do 1/4 de círculo*/
 }
 
 #boo .paragrafo{
     border: 2px solid rgb(182, 43, 187);
-    margin-left: 70px;
+    margin-left: 70px; /*colocando essa margem para que essa div não fique tão comprida em relação as outras divs paragrafo*/
 }
-.paragrafo #title-pink{
-    color: rgb(182, 43, 187);
+.paragrafo #title-pink{ /*chamando o id title-pink que está dentro da classe paragrafo*/
+    color: rgb(182, 43, 187); /*cor da fonte*/
     margin-bottom: 12px;
 }
 
 #boo {
-    background-color: rgba(229, 128, 145, 0.185);
+    background-color: rgba(229, 128, 145, 0.185); /*cor de fundo*/
 }
 
 .paragrafo #title-purple,
 #about-movie .paragrafo2 h3,
 #trailer h1{
-    color: rgba(125, 39, 175, 0.582);
+    color: rgba(125, 39, 175, 0.582); /*cor do texto*/
 }
 
-.paragrafo2 h3{
-    font-family: 'Poppins', sans-serif;
-}
-
-#about-movie .paragrafo,
-#about-movie .paragrafo2{
-    border: 2px solid rgba(125, 39, 175, 0.582);
-}
-
-#about-movie .paragrafo2{
-    margin-right: 580px;
-}
-
-#about-movie .paragrafo2 h4 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
-}
-
-.trailer-block{
-    display: flex;
-    display: block;
-    justify-content: space-between;
-}
-
-.trailer-block h1{
-    text-align: center; 
+.trailer-block h1{ /*texto h1 da última seção*/
+    text-align: center; /*o texto ficará alinhado no centro*/ 
 }
 
 footer p,
@@ -300,61 +291,57 @@ section p,
 form input,
 form textarea,
 form button{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /*fonte do google fonts*/
 }
 
 #trailer{
-    background-color: rgba(55, 55, 160, 0.329);
-    align-items: flex-start;
+    background-color: rgba(55, 55, 160, 0.329); /*cor de fundo*/
 }
+
 iframe{
-    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.479);
+    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.479); /*sobreamento ao redor do vídeo*/
 }
 
 form{
-    box-shadow: 3px 7px 18px rgba(0, 0, 0, 0.493);
-}
-
-section p{
-    font-size: 20px;
-    text-align: justify;
+    box-shadow: 3px 7px 18px rgba(0, 0, 0, 0.37); /*spbreamento ao redor do formulário*/
 }
 
 form h1,
 form select,
 form textarea,
 form button{
-    display: block;
-    width: 320px;
-    margin-bottom: 8px;
-    padding: 8px;
-    border-radius: 15px;
+    display: block; /*display em coluna*/
+    width: 320px; /*largura dos retângulos e botão do formulário*/
+    margin-bottom: 8px; /*margem debaixo dos retângulos e botão do formulário*/
+    padding: 8px; /*espaçamento entre o conteúdo e a borda dos retângulos e botão do formulário*/
+    border-radius: 15px; /*arredondando as quinas dos retângulos e botão do formulário*/
 }
 
-form button{
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+form button{ /*botçao do formulário*/
+    cursor: pointer; /*essa propriedade faz com que o curdor do mouse mude de setinha para mãozinha, quando passar o mouse em cima
+    do botão*/
+    font-family: 'Poppins', sans-serif; /*fonte do google fonts*/
     background-color: rgba(125, 39, 175, 0.582);
-    border: none;
+    border: none; /*tirando a borda*/
 }
 
-form{
-    border: 2px solid rgba(125, 39, 175, 0.582);
-    border-radius: 8%;
+form{ /*formulário*/
+    border: 2px solid rgba(125, 39, 175, 0.582); /*borda do formulário*/
+    border-radius: 8%; /*arrendondando as quinas do formulário*/
     background-color: rgba(128, 128, 128, 0.288);
     padding: 8px;
 }
 
-form h1{
-    padding: 0px;
-    text-align: center;
+form h1{ /*título do formulário*/
+    padding: 0px; /*tirando o espaçamento entre o conteúdo e a borda*/
+    text-align: center; /*alinhado o texto para o centro */
 }
 
-form textarea{
-    resize: none;
-    height: 150px;
+form textarea{ /*caixa de texto do formulário*/
+    resize: none; /*desabilitando a função de mexer no tamanho da caixa de mensagem pela navegador*/
+    height: 150px; /*altura*/
 }
 
 footer p{
-    color: #fff;
+    color: #fff; /*cor do texto*/
 }
